@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Room3</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+	<!-- <script src="room3.js"></script> -->
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<center><p style="font-size: 30px; margin-top: 100px;margin-bottom: 50px; font-family: Helvetica;">Bring the key with you</p></center>
+
+  <select style="width: 100px; margin-left: 20vw;">
+    <option></option>
+    <option></option>
+    <option>apple</option>
+    <option></option>
+    <option></option>
+    <option></option>
+    <option></option>
+    <option>knife</option>
+    <option></option>
+    <option>bandage</option>
+    <option></option>
+    <option></option>
+  </select>
+
+   <select style="width: 100px; margin-left: 10vw;">
+    <option></option>
+    <option></option>
+    <option></option>
+    <option></option>
+    <option></option>
+    <option>letter</option>
+    <option></option>
+    <option>mirror</option>
+    <option>pen</option>
+    <option></option>
+    <option></option>
+    <option></option>
+  </select>
+
+   <select id="mySelect" style="width: 100px; margin-left: 10vw;">
+    <option></option>
+    <option></option>
+    <option></option>
+    <option></option>
+    <option></option>
+    <option>book</option>
+    <option></option>
+    <option></option>
+    <option>key</option>
+    <option>stapler</option>
+    <option></option>
+    <option></option>
+  </select>
+
+   <select style="width: 100px; margin-left: 10vw;">
+    <option></option>
+    <option></option>
+    <option></option>
+    <option></option>
+    <option>hammer</option>
+    <option></option>
+    <option>rope</option>
+    <option></option>
+    <option></option>
+    <option></option>
+    <option></option>
+    <option></option>
+  </select>
+
+
+
+
+<center><a id="door" href=""><button style="margin-top: 400px" type="button" onclick="myFunction()">Leave</button></a></center>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mySelect").value;
+
+  if(x=="key"){
+  	  // document.getElementById("demo").innerHTML = x;
+  	  $("#door").attr('href','room4.html');
+  }
+}
+</script>
+	
+
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Room1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+		p{
+			font-family: Helvetica;
+			text-align: center;
+		}
+		button[type=button]{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<center><p style="	font-family: Helvetica;margin-top: 300px;font-size: 30px;">Welcome!</p></center>
+	<center><button onclick="myFunction()"  type="button">Enter</button></center>
+	<p id="error">Don't click me! I'm taking a break!</p>
+	<p id="timer" style="font-size: 40px"></p>
+	<a id="enterLink" href=""><p id="enter"></p></a>
+	<script type="text/javascript">
+		function myFunction(){
+			// var error1 = "Don't click me! I'm taking a break!";
+			var error2 = "I told you don't bother me! Try again in 20 seconds.";
+			document.getElementById("error").innerHTML = error2;
+      		$("#error").css('color', 'red'); 
+      		$("button").css('visibility','hidden');
+
+      		var timeLeft = 20;
+			var elem = document.getElementById('timer');
+			var timerId = setInterval(countdown, 1000);
+
+			function countdown() {
+			    if (timeLeft == -1) {
+			        clearTimeout(timerId);
+			        doSomething();
+			    } else {
+			        elem.innerHTML = timeLeft;
+			        timeLeft--;
+			    }
+			}
+
+			function doSomething() {
+			    var enterTxt = "Click me to enter";
+				document.getElementById("enter").innerHTML = enterTxt;
+				$('#enterLink').attr("href","room2.html");
+			}
+		}	
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+
+
+</body>
+</html>
+
